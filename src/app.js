@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 app.use(morgan("tiny"));
 app.use(cors());
+
 app.set("pj", pj);
 
 app.use(express.json()) 
