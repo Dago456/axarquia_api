@@ -1,8 +1,9 @@
 import { Sequelize } from 'sequelize';
-
-const sequelize = new Sequelize('company', 'root', '', {
-  host: 'localhost',
-  dialect: 'mysql'
+import {DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT} from './config'
+const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
+  host: DB_HOST,
+  dialect: 'mysql',
+  port: DB_PORT
 });
 
 try {

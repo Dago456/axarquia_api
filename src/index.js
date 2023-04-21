@@ -1,6 +1,9 @@
 import app from "./app";
-import './database'
+import "./database";
+
+import { PORT } from "./config";
+
 require("dotenv").config();
 
-const port = process.env.PORT;
+const port = PORT;
 app.listen(port, console.log("Conectado al puerto ", port));
