@@ -1,19 +1,21 @@
 const { DataTypes } = require("sequelize");
 import sequelize from "../database";
 
-const Product = sequelize.define(
-  "products",
+const Comunidad = sequelize.define(
+  "comunidades",
   {
-    name: {
+    id_comunidades: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement:true
+    },
+    nom_comu: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    price: {
-      type: DataTypes.DECIMAL(10, 2),
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.TEXT,
+    ubi_comu: {
+      type: DataTypes.STRING,
       allowNull: true,
     },
   },
@@ -22,5 +24,5 @@ const Product = sequelize.define(
   }
 );
 
-export default Product
+export default Comunidad
 

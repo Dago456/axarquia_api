@@ -3,15 +3,15 @@ import * as productsController from '../controllers/productsController'
 
 const router = Router();
 
-router.get('/', productsController.obtenerProductos )
+router.get('/', productsController.obtenerComunidades )
 
-router.get('/:id', productsController.obtenerProductoPorId )
+router.get('/:id', productsController.obtenerComunidadPorId )
 
-router.post('/', productsController.crearProducto )
+router.post('/', productsController.crearComunidad )
 
-router.put('/:id', productsController.actualizarProductoPorId )
+router.put('/:id', productsController.actualizarComunidadPorId)
 
-router.delete('/:id', productsController.eliminarProductoPorId )
+router.delete('/:id', productsController.eliminarComunidadPorId )
 
 export default router;
 

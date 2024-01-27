@@ -1,28 +1,28 @@
-import Product from "../models/productsModel";
+import Comunidad from "../models/productsModel";
 
-export const obtenerProductos = async (req, res) => {
-  const productos = await Product.findAll();
-  res.json(productos);
+export const obtenerComunidades = async (req, res) => {
+  const comunidades = await Comunidad.findAll();
+  res.json(comunidades);
 };
 
-export const obtenerProductoPorId = async (req, res) => {
-  const producto = await Product.findByPk(req.params.id);
-  res.json(producto);
+export const obtenerComunidadPorId = async (req, res) => {
+  const comunidad = await Comunidad.findByPk(req.params.id);
+  res.json(comunidad);
 };
 
-export const crearProducto = async (req, res) => {
-  await Product.create(req.body);
-  res.json({ message: "Producto creado" });
+export const crearComunidad = async (req, res) => {
+  await Comunidad.create(req.body);
+  res.json({ message: "Comunidad creada" });
 };
 
-export const actualizarProductoPorId = async (req, res) => {
-  const producto = await Product.findByPk(req.params.id);
-  await producto.update(req.body);
-  res.json({ message: "Producto actualizado" });
+export const actualizarComunidadPorId = async (req, res) => {
+  const comunidad = await Comunidad.findByPk(req.params.id);
+  await comunidad.update(req.body);
+  res.json({ message: "Comunidad actualizada" });
 };
 
-export const eliminarProductoPorId = async (req, res) => {
-  const producto = await Product.findByPk(req.params.id);
-  await producto.destroy();
-  res.json({ message: "Producto eliminado" });
+export const eliminarComunidadPorId = async (req, res) => {
+  const comunidad = await Comunidad.findByPk(req.params.id);
+  await comunidad.destroy();
+  res.json({ message: "Comunidad eliminada" });
 };
