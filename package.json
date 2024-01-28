@@ -1,7 +1,7 @@
 {
   "name": "company",
   "version": "1.0.0",
-  "description": "Mi primera api",
+  "description": "api de AXARQUIA",
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/index.js",
@@ -9,7 +9,7 @@
     "build": "babel src -d dist"
   },
   "keywords": [],
-  "author": "XaviDev",
+  "author": "XaviDev, DAGO",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
