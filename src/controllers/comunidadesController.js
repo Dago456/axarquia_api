@@ -1,4 +1,4 @@
-import Comunidad from "../models/productsModel";
+import Comunidad from "../models/comunidadesModel";
 
 export const obtenerComunidades = async (req, res) => {
   const comunidades = await Comunidad.findAll();

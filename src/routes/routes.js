@@ -1,7 +1,8 @@
-import productsRoutes from "./productsRoutes";
+import comunidadesRoutes from "./comunidadesRoutes";
+import operariosRoutes from "./operariosRoutes";
 
 export default function (app) {
 
-  app.use("/Comunidad", productsRoutes);
-  
+  app.use("/Comunidad", comunidadesRoutes);
+  app.use("/Operario", operariosRoutes);
 }
