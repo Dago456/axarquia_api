@@ -11,15 +11,99 @@
 			"name": "Get * operarios",
 			"event": [
 				{
+					"listen": "prerequest",
+					"script": {
+						"id": "146bb584-da49-413e-b476-e89a09a9d8dc",
+						"exec": [
+							"[\r",
+							"    {\r",
+							"        \"id_Operario\": 1,\r",
+							"        \"nom_ope\": \"Gema Gavilan\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 2,\r",
+							"        \"nom_ope\": \"Antonio Rojas\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 3,\r",
+							"        \"nom_ope\": \"Javier Solis\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 4,\r",
+							"        \"nom_ope\": \"Salvador Muiñoz\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 5,\r",
+							"        \"nom_ope\": \"Juan Antonio\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 6,\r",
+							"        \"nom_ope\": \"Francisco Rojas\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 7,\r",
+							"        \"nom_ope\": \"David Montero\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 8,\r",
+							"        \"nom_ope\": \"Isabel Maria\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 9,\r",
+							"        \"nom_ope\": \"Victoriano\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 10,\r",
+							"        \"nom_ope\": \"Estela Rojas\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 11,\r",
+							"        \"nom_ope\": \"Antonio Muñoz\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 12,\r",
+							"        \"nom_ope\": \"Rafael Sebastian\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 13,\r",
+							"        \"nom_ope\": \"M Rojas\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 14,\r",
+							"        \"nom_ope\": \"Maite\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 15,\r",
+							"        \"nom_ope\": \"F R Moreno\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 16,\r",
+							"        \"nom_ope\": \"Diana\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 17,\r",
+							"        \"nom_ope\": \"Fabian Gomez\"\r",
+							"    },\r",
+							"    {\r",
+							"        \"id_Operario\": 18,\r",
+							"        \"nom_ope\": \"J. Ferney\"\r",
+							"    }\r",
+							"]\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
 					"listen": "test",
 					"script": {
+						"id": "d42ead8f-5d8e-4fec-9043-a79cb1cf5dad",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
-						"type": "text/javascript",
-						"id": "d9788892-92f5-43e0-b364-94c72bb1aec0"
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -31,18 +115,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/info?id=1",
+					"raw": "http://localhost:5000/operario/",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5000",
 					"path": [
-						"info"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"operario",
+						""
 					]
 				},
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -55,13 +136,13 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "62c6a521-4b1c-4d83-9b4a-282a7b986eda",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
-						"type": "text/javascript",
-						"id": "62c6a521-4b1c-4d83-9b4a-282a7b986eda"
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -73,18 +154,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/info?id=1",
+					"raw": "http://localhost:5000/operario/17",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5000",
 					"path": [
-						"info"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"operario",
+						"17"
 					]
 				},
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -97,14 +175,14 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "5cb722a7-2cab-4ae9-b3b7-2633dc6e8afb",
 						"exec": [
 							"pm.test(\"Successful POST request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
 							"});",
 							""
 						],
-						"type": "text/javascript",
-						"id": "5cb722a7-2cab-4ae9-b3b7-2633dc6e8afb"
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -117,7 +195,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"raw": "{\n    \"id_Operario\": 19,\n    \"nom_ope\": \"Gema Garmendia\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -125,12 +203,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/info",
+					"raw": "http://localhost:5000/operario/",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5000",
 					"path": [
-						"info"
+						"operario",
+						""
 					]
 				},
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
@@ -143,14 +224,14 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "47a51ef0-461d-44ea-a5cf-d7e69f93892a",
 						"exec": [
 							"pm.test(\"Successful PUT request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
 							"});",
 							""
 						],
-						"type": "text/javascript",
-						"id": "47a51ef0-461d-44ea-a5cf-d7e69f93892a"
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -163,7 +244,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"raw": "{\n\t\"nom_ope\": \"Gema Garmendiia\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -171,18 +252,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/info?id=1",
+					"raw": "http://localhost:5000/operario/19",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5000",
 					"path": [
-						"info"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"operario",
+						"19"
 					]
 				},
 				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
@@ -195,14 +273,14 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "2a3609bc-929c-4fef-b1f0-e199de27df05",
 						"exec": [
 							"pm.test(\"Successful DELETE request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
 							"});",
 							""
 						],
-						"type": "text/javascript",
-						"id": "2a3609bc-929c-4fef-b1f0-e199de27df05"
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -223,18 +301,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/info?id=1",
+					"raw": "http://localhost:5000/operario/19",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5000",
 					"path": [
-						"info"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"operario",
+						"19"
 					]
 				},
 				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
@@ -246,32 +321,108 @@
 		{
 			"listen": "prerequest",
 			"script": {
+				"id": "6c34eb3d-f834-48f0-874d-a974d09a83e9",
 				"type": "text/javascript",
 				"exec": [
+					"[",
+					"    {",
+					"        \"id_Operario\": 1,",
+					"        \"nom_ope\": \"Gema Gavilan\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 2,",
+					"        \"nom_ope\": \"Antonio Rojas\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 3,",
+					"        \"nom_ope\": \"Javier Solis\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 4,",
+					"        \"nom_ope\": \"Salvador Muiñoz\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 5,",
+					"        \"nom_ope\": \"Juan Antonio\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 6,",
+					"        \"nom_ope\": \"Francisco Rojas\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 7,",
+					"        \"nom_ope\": \"David Montero\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 8,",
+					"        \"nom_ope\": \"Isabel Maria\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 9,",
+					"        \"nom_ope\": \"Victoriano\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 10,",
+					"        \"nom_ope\": \"Estela Rojas\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 11,",
+					"        \"nom_ope\": \"Antonio Muñoz\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 12,",
+					"        \"nom_ope\": \"Rafael Sebastian\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 13,",
+					"        \"nom_ope\": \"M Rojas\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 14,",
+					"        \"nom_ope\": \"Maite\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 15,",
+					"        \"nom_ope\": \"F R Moreno\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 16,",
+					"        \"nom_ope\": \"Diana\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 17,",
+					"        \"nom_ope\": \"Fabian Gomez\"",
+					"    },",
+					"    {",
+					"        \"id_Operario\": 18,",
+					"        \"nom_ope\": \"J. Ferney\"",
+					"    }",
+					"]",
+					"",
+					"",
 					""
-				],
-				"id": "b40e8c1f-851f-4437-b258-69ae3c29b22f"
+				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
+				"id": "c40726e6-c30e-4c80-b43d-9c1ef148636d",
 				"type": "text/javascript",
 				"exec": [
 					""
-				],
-				"id": "856ea5aa-fc61-421b-9f5d-c26869bad1ae"
+				]
 			}
 		}
 	],
 	"variable": [
 		{
-			"id": "c98afb4c-91cd-4db4-86ad-0dfca1db0db0",
+			"id": "b4aa0ac0-4208-4ebb-9070-c3ea6fe23514",
 			"key": "id",
 			"value": "1"
 		},
 		{
-			"id": "4d4b1a94-0369-4b92-8c77-6aeaca7dc244",
+			"id": "a463a79d-b93d-4a44-9431-a9bcf6534b25",
 			"key": "base_url",
 			"value": "https://postman-rest-api-learner.glitch.me/"
 		}
