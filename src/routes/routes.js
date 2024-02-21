@@ -3,6 +3,6 @@ import operariosRoutes from "./operariosRoutes";
 
 export default function (app) {
 
-  app.use("/Comunidad", comunidadesRoutes);
-  app.use("/Operario", operariosRoutes);
+  app.use("/comunidad", comunidadesRoutes);
+  app.use("/operario", operariosRoutes);
 }
