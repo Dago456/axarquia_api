@@ -1,5 +1,6 @@
 const {DataTypes} = require ("sequelize");
 import sequelize from "../database";
+import Operario from "./operariosModel";
 
 const RegistrarEnt = sequelize.define(
  "registrarent",
@@ -13,7 +14,10 @@ const RegistrarEnt = sequelize.define(
     id_operario: {
       type:DataTypes.INTEGER,
       allowNull: false,
-      FOREIGNKEYS: true 
+      references: {
+        model: Operario, 
+        key: 'id_Operario'
+      }
     },
     hora_ent: {
       type:DataTypes.STRING ,
