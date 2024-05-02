@@ -9,6 +9,10 @@ export default function (app) {
   app.use("/comunidad", comunidadesRoutes);
   app.use("/operario", operariosRoutes);
   app.use("/registroent", registroEntRoutes)
-  app.use("/registroesal", registroSalRoutes)
+  app.use("/registrosal", registroSalRoutes)
 
+
+   app.use((req, res) => {
+    res.status(404).json({ message: "Ruta no encontrada" });
+  });
 }

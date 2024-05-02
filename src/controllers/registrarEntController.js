@@ -1,7 +1,7 @@
 import RegistrarEnt from "../models/registrarenModel";
 
 export const obtenerRegistroEnt = async (req,res) => {
-    const RegistroEnts = await RegistrarEnt.findByPk(req.params.id);
+    const RegistroEnts = await RegistrarEnt.findAll();
     res.json(RegistroEnts);
 };
 

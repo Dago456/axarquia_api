@@ -4,7 +4,7 @@ import sequelize from "../database";
 const RegistrarEnt = sequelize.define(
  "registraren",
  {
-    id_Entrada : {
+  id_Entrada: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -13,7 +13,10 @@ const RegistrarEnt = sequelize.define(
     id_operario: {
       type:DataTypes.INTEGER,
       allowNull: false,
-      FOREIGNKEYS: true 
+      references: {
+        model: 'operarios',
+        key: '1'
+      }
     },
     hora_ent: {
       type:DataTypes.STRING ,
