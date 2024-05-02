@@ -1,7 +1,7 @@
 import RegistrarSal from "../models/registroSalModel";
 
 export const obtenerRegistroSal = async (req,res) => {
-    const RegistroSals = await RegistrarSal.findAll();
+    const RegistroSals = await RegistrarSal.findyPk(req.params.id);
     res.json(RegistroSals);
 };
 
