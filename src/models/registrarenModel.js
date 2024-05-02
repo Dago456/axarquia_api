@@ -2,7 +2,7 @@ const {DataTypes} = require ("sequelize");
 import sequelize from "../database";
 
 const RegistrarEnt = sequelize.define(
- "registraren",
+ "registrarent",
  {
   id_Entrada: {
       type: DataTypes.INTEGER,
@@ -13,6 +13,7 @@ const RegistrarEnt = sequelize.define(
     id_operario: {
       type:DataTypes.INTEGER,
       allowNull: false,
+      FOREIGNKEYS: true 
     },
     hora_ent: {
       type:DataTypes.STRING ,
