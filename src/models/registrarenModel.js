@@ -16,15 +16,19 @@ const RegistrarEnt = sequelize.define(
       FOREIGNKEYS: true 
     },
     hora_ent: {
-      type:DataTypes.DATE,
+      type:DataTypes.STRING ,
       allowNull: false
     },
     fecha_ent: {
-      type:DataTypes.DATE,
+      type:DataTypes.INTEGER,
       allowNull: false
     },
     mes_ent: {
-      type:DataTypes.DATE,
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
+    año_ent: {
+      type:DataTypes.INTEGER,
       allowNull:false
     }
  },
