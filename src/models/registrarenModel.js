@@ -13,10 +13,6 @@ const RegistrarEnt = sequelize.define(
     id_operario: {
       type:DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: 'operarios',
-        key: '1'
-      }
     },
     hora_ent: {
       type:DataTypes.STRING ,
