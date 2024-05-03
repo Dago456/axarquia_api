@@ -20,19 +20,19 @@ const Entrada = sequelize.define(
       }
     },
     hora_ent: {
-      type:DataTypes.STRING ,
+      type:DataTypes.STRING,
       allowNull: false
     },
     fecha_ent: {
-      type:DataTypes.INTEGER,
+      type:DataTypes.STRING,
       allowNull: false
     },
     mes_ent: {
-      type:DataTypes.INTEGER,
+      type:DataTypes.STRING,
       allowNull:false
     },
     año_ent: {
-      type:DataTypes.INTEGER,
+      type:DataTypes.STRING,
       allowNull:false
     }
  },
