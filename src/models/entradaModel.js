@@ -1,9 +1,9 @@
-const {DataTypes} = require ("sequelize");
+const { DataTypes } = require("sequelize");
 import sequelize from "../database";
 import Operario from "./operariosModel";
 
-const RegistrarEnt = sequelize.define(
- "registrarent",
+const Entrada = sequelize.define(
+ "entrada",
  {
   id_Entrada: {
       type: DataTypes.INTEGER,
@@ -41,4 +41,4 @@ const RegistrarEnt = sequelize.define(
  }
 );
 
-export default RegistrarEnt
+export default Entrada
