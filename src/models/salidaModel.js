@@ -2,10 +2,10 @@ const {DataTypes} = require ("sequelize");
 import sequelize from "../database";
 import Operario from "./operariosModel";
 
-const RegistrarSal = sequelize.define(
- "registrarsal",
+const Salida = sequelize.define(
+ "salida",
  {
-    id_salida : {
+    id_salida: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -37,4 +37,4 @@ const RegistrarSal = sequelize.define(
  }
 );
 
-export default RegistrarSal
+export default Salida
