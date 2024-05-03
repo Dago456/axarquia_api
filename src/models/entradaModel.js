@@ -11,7 +11,14 @@ const Entrada = sequelize.define(
       primaryKey: true,
       autoIncrement: true
     },
-   
+    id_operario: {
+      type:DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: Operario, 
+        key: 'id_Operario'
+      }
+    },
     hora_ent: {
       type:DataTypes.STRING ,
       allowNull: false
