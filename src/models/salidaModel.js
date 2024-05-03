@@ -20,15 +20,19 @@ const Salida = sequelize.define(
       }
     },
     hora_sal: {
-      type:DataTypes.DATE,
+      type:DataTypes.STRING ,
       allowNull: false
     },
     fecha_sal: {
-      type:DataTypes.DATE,
+      type:DataTypes.INTEGER,
       allowNull: false
     },
     mes_sal: {
-      type:DataTypes.DATE,
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
+    año_sal: {
+      type:DataTypes.INTEGER,
       allowNull:false
     }
  },
