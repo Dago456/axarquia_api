@@ -5,7 +5,7 @@ export const obtenerPartes = async (req, res) => {
   res.json(partes);
 };
 
-export const     = async (req, res) => {
+export const obtenerPartesPorId = async (req, res) => {
   const partes = await ParteComunidad.findByPk(req.params.id);
   res.json(partes);
 };
