@@ -1,15 +1,8 @@
 import Operario from "../models/operariosModel";
-import ParteComunidad from "../models/parteModel";
-
 
 export const obtenerOperarios = async (req, res) => {
   const operarios = await Operario.findAll();
   res.json(operarios);
-};
-
-export const obtenerPartes = async (req, res) => {
-  const partes = await ParteComunidad.findAll();
-  res.json(partes);
 };
 
 export const obtenerOperarioPorId = async (req, res) => {

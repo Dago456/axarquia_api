@@ -3,9 +3,7 @@ import * as operariosController from '../controllers/operariosController'
 
 const router = Router();
 
-//router.get('/', operariosController.obtenerOperarios )
-router.get('/', operariosController.obtenerPartes )
-
+router.get('/', operariosController.obtenerOperarios )
 
 router.get('/:id', operariosController.obtenerOperarioPorId )
 
