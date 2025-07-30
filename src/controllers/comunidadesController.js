@@ -11,7 +11,7 @@ export const buscarComunidadesPorNombre = async (req, res) => {
   try {
     const comunidades = await Comunidad.findAll({
       where: {
-        nom_comunidad: {
+        ubi_comu: {
           [Op.like]: `%${nombre}%`, // búsqueda flexible
         },
       },
