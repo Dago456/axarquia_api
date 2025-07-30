@@ -5,6 +5,8 @@ const router = Router();
 
 router.get('/', productsController.obtenerComunidades )
 
+router.get('/buscar', comunidadesController.buscarComunidadesPorNombre);
+
 router.get('/:id', productsController.obtenerComunidadPorId )
 
 router.post('/', productsController.crearComunidad )
